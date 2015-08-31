@@ -1,0 +1,18 @@
+{% extends "categories_i18n/base.html" %}
+{% comment %}
+
+  This is a very basic template.
+  You can replace this in your own projects, to have a better layout.
+
+{% endcomment %}
+
+{% block content %}
+  {% if object_list %}
+    <ul>
+      {% for object in object_list %}
+        <li><a href="{{ object.get_absolute_url }}">{{ object }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endblock %}
+

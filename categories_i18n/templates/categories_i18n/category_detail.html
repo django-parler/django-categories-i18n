@@ -1,0 +1,13 @@
+{% extends "categories_i18n/base.html" %}
+{% comment %}
+
+  This is a very basic template.
+  You can replace this in your own projects, to have a better layout.
+
+{% endcomment %}
+
+{% block title %}{{ object.title }}{% endblock %}
+
+{% block content %}
+  <a href="{% url 'category_list' %}">All Categories</a> -&gt; {{ object }}
+{% endblock %}
