@@ -32,10 +32,11 @@ class CategoryManager(TreeManager, TranslatableManager):
     """
     Base manager class for the categories.
     """
-    # This attribute is now a standard property in Django 1.7:
     _queryset_class = CategoryQuerySet
 
     def get_queryset(self):
+        # Nasty: In some django-mptt 0.7 versions, TreeManager.get_querset() no longer calls super()
+        # Hence, redefine get_queryset() here to have the logic from django-parler and django-mptt.
         return self._queryset_class(self.model, using=self._db).order_by(self.tree_id_attr, self.left_attr)
 
     # For Django 1.5
