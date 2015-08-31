@@ -25,6 +25,14 @@ setup(
     version=find_version('categories_i18n', '__init__.py'),
     license='Apache 2.0',
 
+    install_requires=[
+        'django-mptt>=0.5.5',
+        'django-parler>=1.4',
+    ],
+    requires=[
+        'Django (>=1.5)',
+    ],
+
     description='Translatable Categories model',
     long_description=read('README.rst'),
 
