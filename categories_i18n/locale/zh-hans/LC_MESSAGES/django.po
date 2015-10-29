@@ -1,0 +1,50 @@
+# Simplified Chinese Translations for Django Categories
+# Copyright (C) 2015
+# This file is distributed under the same license as the django-categories-i18n package.
+# Kuiyu CHANG <kuiyu@mosuma.com>, 2015
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-29 11:39+0800\n"
+"PO-Revision-Date: 2015-10-29 11:39+0800\n"
+"Last-Translator: Kuiyu CHANG <kuiyu@mosuma.com>\n"
+"Language-Team: Mosuma Corporation <info@mosuma.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: abstract_models.py:27
+msgid "Parent"
+msgstr "父母"
+
+#: abstract_models.py:50
+msgid "title"
+msgstr "标题"
+
+#: abstract_models.py:51
+msgid "slug"
+msgstr "缩写"
+
+#: abstract_models.py:51
+msgid "The slug is used in the URL of the page"
+msgstr "此缩写将构成网址部分"
+
+#: apps.py:10 models.py:12
+msgid "Categories"
+msgstr "类别"
+
+#: models.py:11
+msgid "Category"
+msgstr "类别"
+
+#: models.py:25
+msgid "Category Translation"
+msgstr "类别翻译"
+
+#: models.py:26
+msgid "Category Translations"
+msgstr "类别翻译"
