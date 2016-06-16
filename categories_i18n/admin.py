@@ -18,6 +18,7 @@ class CategoryAdmin(MPTTModelAdmin, TranslatableAdmin):
     Admin page for categories.
     """
     list_display = ('title', 'slug')
+    mptt_indent_field = 'title'  # be explicit for MPTT
     search_fields = ('translations__title', 'translations__slug')
     form = CategoryAdminForm
 
