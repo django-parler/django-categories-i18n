@@ -39,8 +39,8 @@ setup(
     author='Diederik van der Boor',
     author_email='opensource@edoburu.nl',
 
-    url='https://github.com/edoburu/django-categories-i18n',
-    download_url='https://github.com/edoburu/django-categories-i18n/zipball/master',
+    url='https://github.com/django-parler/django-categories-i18n',
+    download_url='https://github.com/django-parler/django-categories-i18n/zipball/master',
 
     packages=find_packages(exclude=('example*',)),
     include_package_data=True,
