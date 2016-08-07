@@ -9,15 +9,15 @@ Installation
 ============
 
 First install the module, preferably in a virtual environment.
-It can be installed from PyPI::
+It can be installed from PyPI:
+
+.. code-block:: bash
 
     pip install django-categories-i18n
 
-Or the current folder can be installed for development::
+Add ``categories_i18n`` to your ``INSTALLED_APPS``:
 
-    pip install -e .
-
-Add ``categories_i18n`` to your ``INSTALLED_APPS``::
+.. code-block:: python
 
     INSTALLED_APPS += (
         'categories_i18n',
@@ -28,6 +28,7 @@ Usage
 =====
 
 * Link to the ``categories_i18n.models.Category`` model in your application.
+
 
 Improving this package
 ======================
