@@ -19,7 +19,7 @@ class CategoryTranslation(AbstractCategoryTranslation):
     By using this model instead of the ``parler.models.TranslatedFields(..)`` construct,
     the translatable fields can be defined in an abstract model.
     """
-    master = models.ForeignKey(Category, related_name='translations')
+    master = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='translations')
 
     class Meta:
         verbose_name = _("Category Translation")

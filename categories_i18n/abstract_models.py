@@ -1,5 +1,4 @@
 from django.contrib.sites.models import Site
-from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
@@ -9,6 +8,11 @@ from parler.fields import TranslatedField
 from parler.models import TranslatableModel, TranslatedFieldsModel
 from parler.utils.context import switch_language
 from .managers import CategoryManager
+
+try:
+    from django.urls import reverse  # Django 1.10+
+except ImportError:
+    from django.core.urlresolvers import reverse
 
 
 def _get_current_site():
@@ -24,8 +28,8 @@ class AbstractCategory(MPTTModel, TranslatableModel):
     title = TranslatedField(any_language=True)
     slug = TranslatedField()  # Explicitly added, but not needed
 
-    parent = TreeForeignKey('self', blank=True, null=True, related_name='children', verbose_name=_('Parent'))
-    site = models.ForeignKey(Site, editable=False, blank=True, null=True, default=_get_current_site)
+    parent = TreeForeignKey('self', on_delete=models.CASCADE, blank=True, null=True, related_name='children', verbose_name=_('Parent'))
+    site = models.ForeignKey(Site, on_delete=models.CASCADE, editable=False, blank=True, null=True, default=_get_current_site)
 
     objects = CategoryManager()
 

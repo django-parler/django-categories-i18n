@@ -21,8 +21,8 @@ class Migration(migrations.Migration):
                 ('rght', models.PositiveIntegerField(editable=False, db_index=True)),
                 ('tree_id', models.PositiveIntegerField(editable=False, db_index=True)),
                 ('level', models.PositiveIntegerField(editable=False, db_index=True)),
-                ('parent', mptt.fields.TreeForeignKey(related_name='children', verbose_name='Parent', blank=True, to='categories_i18n.Category', null=True)),
-                ('site', models.ForeignKey(default=categories_i18n.abstract_models._get_current_site, blank=True, editable=False, to='sites.Site', null=True)),
+                ('parent', mptt.fields.TreeForeignKey(related_name='children', verbose_name='Parent', blank=True, to='categories_i18n.Category', on_delete=models.CASCADE, null=True)),
+                ('site', models.ForeignKey(default=categories_i18n.abstract_models._get_current_site, blank=True, editable=False, to='sites.Site', on_delete=models.CASCADE, null=True)),
             ],
             options={
                 'ordering': ('tree_id', 'lft'),
@@ -37,7 +37,7 @@ class Migration(migrations.Migration):
                 ('language_code', models.CharField(max_length=15, verbose_name='Language', db_index=True)),
                 ('title', models.CharField(max_length=255, verbose_name='title')),
                 ('slug', models.SlugField(help_text='The slug is used in the URL of the page', max_length=100, verbose_name='slug')),
-                ('master', models.ForeignKey(related_name='translations', to='categories_i18n.Category')),
+                ('master', models.ForeignKey(related_name='translations', to='categories_i18n.Category', on_delete=models.CASCADE)),
             ],
             options={
                 'verbose_name': 'Category Translation',
