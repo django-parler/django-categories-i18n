@@ -30,7 +30,7 @@ setup(
         'django-parler>=1.4',
     ],
     requires=[
-        'Django (>=1.5)',
+        'Django (>=1.7)',
     ],
 
     description='Translatable Categories model',

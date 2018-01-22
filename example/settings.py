@@ -45,14 +45,7 @@ INSTALLED_APPS = [
     'categories_i18n',
 ]
 
-
-import django
-if django.VERSION < (1, 7):
-    INSTALLED_APPS += [
-        'south',
-    ]
-
-MIDDLEWARE_CLASSES = [
+MIDDLEWARE_CLASSES = MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
