@@ -4,15 +4,8 @@ The manager classes.
 import django
 from django.db.models.query import QuerySet
 from mptt.managers import TreeManager
+from mptt.querysets import TreeQuerySet
 from parler.managers import TranslatableManager, TranslatableQuerySet
-
-try:
-    # mptt 0.7 has queryset methods too
-    from mptt.querysets import TreeQuerySet
-except ImportError:
-    # provide compatibility with older mptt versions by adding a stub.
-    class TreeQuerySet(QuerySet):
-        pass
 
 
 class CategoryQuerySet(TranslatableQuerySet, TreeQuerySet):
@@ -20,7 +13,7 @@ class CategoryQuerySet(TranslatableQuerySet, TreeQuerySet):
     The Queryset methods for the Category model.
     """
     def as_manager(cls):
-        # Make sure the Django 1.7 way of creating managers works.
+        # Make sure the Django way of creating managers works.
         manager = CategoryManager.from_queryset(cls)()
         manager._built_with_as_manager = True
         return manager

@@ -26,11 +26,11 @@ setup(
     license='Apache 2.0',
 
     install_requires=[
-        'django-mptt>=0.5.5',
-        'django-parler>=1.4',
+        'django-mptt>=0.9.1',
+        'django-parler>=2.0.1',
     ],
     requires=[
-        'Django (>=1.7)',
+        'Django (>=1.11)',
     ],
 
     description='Translatable Categories model',
@@ -53,16 +53,10 @@ setup(
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Framework :: Django',
-        'Framework :: Django :: 1.7',
-        'Framework :: Django :: 1.8',
-        'Framework :: Django :: 1.9',
-        'Framework :: Django :: 1.10',
         'Framework :: Django :: 1.11',
         'Framework :: Django :: 2.0',
         'Framework :: Django :: 2.1',
