@@ -1,6 +1,12 @@
 Changelog
 =========
 
+Version 1.1.1 (2020-01-05)
+--------------------------
+
+* Fixed Django 3.0 support by replacing ``python_2_unicode_compatible`` import.
+
+
 Version 1.1 (2018-01-22)
 ------------------------
 
