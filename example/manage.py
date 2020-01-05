@@ -9,5 +9,5 @@ if __name__ == "__main__":
 
     # Allow starting the app without installing the module.
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
-    
+
     execute_from_command_line(sys.argv)

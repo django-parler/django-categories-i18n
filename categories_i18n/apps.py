@@ -6,5 +6,6 @@ class CategoryAppConfig(AppConfig):
     """
     Application config for a better Django admin label.
     """
-    name = 'categories_i18n'
+
+    name = "categories_i18n"
     verbose_name = _("Categories")
