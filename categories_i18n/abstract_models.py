@@ -1,6 +1,5 @@
 from django.contrib.sites.models import Site
 from django.db import models
-from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
 from mptt.fields import TreeForeignKey
 from mptt.models import MPTTModel
@@ -8,6 +7,7 @@ from parler.fields import TranslatedField
 from parler.models import TranslatableModel, TranslatedFieldsModel
 from parler.utils.context import switch_language
 from .managers import CategoryManager
+from .six import python_2_unicode_compatible
 
 try:
     from django.urls import reverse  # Django 1.10+
