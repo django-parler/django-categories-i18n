@@ -1,5 +1,4 @@
 from django.contrib import admin
-
 from mptt.admin import MPTTModelAdmin
 from mptt.forms import MPTTAdminForm
 from parler.admin import TranslatableAdmin

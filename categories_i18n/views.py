@@ -1,5 +1,4 @@
 from django.views.generic import DetailView, ListView
-
 from parler.views import TranslatableSlugMixin
 
 from .models import Category

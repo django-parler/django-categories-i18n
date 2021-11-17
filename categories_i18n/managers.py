@@ -3,7 +3,6 @@ The manager classes.
 """
 import django
 from django.db.models.query import QuerySet
-
 from mptt.managers import TreeManager
 from mptt.querysets import TreeQuerySet
 from parler.managers import TranslatableManager, TranslatableQuerySet

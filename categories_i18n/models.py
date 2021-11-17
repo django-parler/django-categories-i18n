@@ -1,10 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from categories_i18n.abstract_models import (
-    AbstractCategory,
-    AbstractCategoryTranslation,
-)
+from categories_i18n.abstract_models import AbstractCategory, AbstractCategoryTranslation
 
 
 class Category(AbstractCategory):
@@ -25,9 +22,7 @@ class CategoryTranslation(AbstractCategoryTranslation):
     the translatable fields can be defined in an abstract model.
     """
 
-    master = models.ForeignKey(
-        Category, on_delete=models.CASCADE, related_name="translations"
-    )
+    master = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="translations")
 
     class Meta:
         verbose_name = _("Category Translation")

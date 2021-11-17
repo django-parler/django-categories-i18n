@@ -1,7 +1,7 @@
+import mptt.fields
 from django.db import migrations, models
 
 import categories_i18n.abstract_models
-import mptt.fields
 
 
 class Migration(migrations.Migration):
@@ -70,9 +70,7 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "language_code",
-                    models.CharField(
-                        max_length=15, verbose_name="Language", db_index=True
-                    ),
+                    models.CharField(max_length=15, verbose_name="Language", db_index=True),
                 ),
                 ("title", models.CharField(max_length=255, verbose_name="title")),
                 (

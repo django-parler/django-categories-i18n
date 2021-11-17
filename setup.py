@@ -25,8 +25,13 @@ setup(
     name="django-categories-i18n",
     version=find_version("categories_i18n", "__init__.py"),
     license="Apache 2.0",
-    install_requires=["django-mptt>=0.9.1", "django-parler>=2.0.1",],
-    requires=["Django (>=1.11)",],
+    install_requires=[
+        "django-mptt>=0.9.1",
+        "django-parler>=2.0.1",
+    ],
+    requires=[
+        "Django (>=1.11)",
+    ],
     description="Translatable Categories model",
     long_description=read("README.rst"),
     author="Diederik van der Boor",
